@@ -1,65 +1,45 @@
-#include <xmmintrin.h>
-
-#include <type_traits>
-#include <iostream>
+#include <simd/abi/sse/sse_abi.hpp>
 
 namespace simd {
-    template <typename T>
-    class abi_sse_floating
-    {
-    public:
-        using simd_memory_t = typename std::conditional<std::is_same<T, float>::value, __m128, __m128d>::type;
-    
-    public:
-        static void          simd_store(simd_memory_t& l, void* r)
-        {
-            if      constexpr (std::is_same<T, float>::value)
-                _mm_store_ps((float*) r, l);
-            else if constexpr (std::is_same<T, double>::value)
-                _mm_store_pd((double*)r, l);
-        }
+namespace abi  {
 
-        static simd_memory_t simd_load (void* l)
-        {
-            if      constexpr (std::is_same<T, float>::value)
-                return _mm_load_ps((float*) l);
-            else if constexpr (std::is_same<T, double>::value)
-                return _mm_load_pd((double*)l);
-        }
-
-    public:
-        static simd_memory_t simd_add(simd_memory_t& l, simd_memory_t& r)
-        { 
-            if      constexpr (std::is_same<T, float>::value)
-                return _mm_add_ps(l, r);
-            else if constexpr (std::is_same<T, double>::value)
-                return _mm_add_pd(l, r);
-        }
-
-        static simd_memory_t simd_sub(simd_memory_t& l, simd_memory_t& r)
-        {
-            if      constexpr (std::is_same<T, float>::value)
-                return _mm_sub_ps(l, r); 
-            else if constexpr (std::is_same<T, double>::value)
-                return _mm_sub_pd(l, r);
-        }
-
-        static simd_memory_t simd_mul(simd_memory_t& l, simd_memory_t& r)
-        {
-            if      constexpr (std::is_same<T, float>::value)
-                return _mm_mul_ps(l, r); 
-            else if constexpr (std::is_same<T, double>::value)
-                return _mm_mul_pd(l, r);
-        }
-
-
-    public:
-        static simd_memory_t simd_cmp_equal(simd_memory_t& l, simd_memory_t& r)
-        {
-            if      constexpr (std::is_same<T, float>::value)
-                return _mm_cmpeq_ps(l, r); 
-            else if constexpr (std::is_same<T, double>::value)
-                return _mm_cmpeq_pd(l, r);
-        }
-    };
+    template <> class sse<float> ;
+    template <> class sse<double>;
 }
+}
+
+template <>
+class simd::abi::sse<float>
+{
+public:
+    using  abi_t = __m128;
+
+    static void  copy_to  (abi_t a, uint8_t* m) {        _mm_store_ps((abi_t*)m, a); }
+    static abi_t copy_from(uint8_t* m)          { return _mm_load_ps ((abi_t*)m)    ; }
+    
+    static abi_t add   (abi_t l, abi_t r) { return _mm_add_ps(l, r); }
+    static abi_t sub   (abi_t l, abi_t r) { return _mm_sub_ps(l, r); }
+    static abi_t mul   (abi_t l, abi_t r) { return _mm_mul_ps(l, r); }
+    
+    static abi_t cmp_eq(abi_t l, abi_t r) { return _mm_cmpeq_ps(l, r); }
+    static abi_t cmp_lt(abi_t l, abi_t r) { return _mm_cmplt_ps(l, r); }
+    static abi_t cmp_gt(abi_t l, abi_t r) { return _mm_cmpgt_ps(l, r); }
+};
+
+template <>
+class simd::abi::sse<double>
+{
+public:
+    using  abi_t = __m128d;
+
+    static void  copy_to  (abi_t a, uint8_t* m) {        _mm_store_pd((abi_t*)m, a); }
+    static abi_t copy_from(uint8_t* m)          { return _mm_load_pd ((abi_t*)m)    ; }
+    
+    static abi_t add   (abi_t l, abi_t r) { return _mm_add_pd(l, r); }
+    static abi_t sub   (abi_t l, abi_t r) { return _mm_sub_pd(l, r); }
+    static abi_t mul   (abi_t l, abi_t r) { return _mm_mul_pd(l, r); }
+    
+    static abi_t cmp_eq(abi_t l, abi_t r) { return _mm_cmpeq_pd(l, r); }
+    static abi_t cmp_lt(abi_t l, abi_t r) { return _mm_cmplt_pd(l, r); }
+    static abi_t cmp_gt(abi_t l, abi_t r) { return _mm_cmpgt_pd(l, r); }
+};
