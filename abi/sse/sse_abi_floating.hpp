@@ -8,23 +8,23 @@ namespace simd {
     class abi_sse_floating
     {
     public:
-        using simd_memory_t = __m128d ;
+        using simd_memory_t = typename std::conditional<std::is_same<T, float>::value, __m128, __m128d>::type;
     
     public:
         static void          simd_store(simd_memory_t& l, void* r)
         {
             if      constexpr (std::is_same<T, float>::value)
-                _mm_store_ps(l, (simd_memory_t*)r, l);
+                _mm_store_ps((float*) r, l);
             else if constexpr (std::is_same<T, double>::value)
-                _mm_store_pd(l, (simd_memory_t*)r, l);
+                _mm_store_pd((double*)r, l);
         }
 
         static simd_memory_t simd_load (void* l)
         {
             if      constexpr (std::is_same<T, float>::value)
-                return _mm_load_ps((simd_memory_t*)l);
+                return _mm_load_ps((float*) l);
             else if constexpr (std::is_same<T, double>::value)
-                return _mm_load_pd((simd_memory_t*)l);
+                return _mm_load_pd((double*)l);
         }
 
     public:

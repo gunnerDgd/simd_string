@@ -1,8 +1,12 @@
 #include <simd/abi/sse/sse_abi_integral.hpp>
-//#include <simd/abi/sse/sse_abi_floating.hpp>
+#include <simd/abi/sse/sse_abi_floating.hpp>
+
+#include <type_traits>
 
 namespace simd {
-    template <typename T, typename Abi = abi_sse_integral<T>>
+    template <typename T, typename Abi = typename std::conditional<std::is_integral<T>::value, 
+                                                                  abi_sse_integral<T>,
+                                                                  abi_sse_floating<T>>::type>
     class simd_base
     {
     protected:
