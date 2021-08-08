@@ -1,6 +1,5 @@
 #pragma once
-#include <xmmintrin.h>
-#include <smmintrin.h>
+#include <immintrin.h>
 
 #include <type_traits>
 #include <cstdint>

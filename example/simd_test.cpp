@@ -10,7 +10,7 @@ int main()
     simd::simd_base<int> a_sse(a), b_sse(b), c_sse;
 
     c_sse = a_sse * b_sse;
-    c_sse.store(c);
+    c_sse.copy_to(c);
 
     for(auto&& i : c)
         std::cout << i << " ";

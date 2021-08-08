@@ -14,8 +14,8 @@ class simd::abi::sse<float>
 public:
     using  abi_t = __m128;
 
-    static void  copy_to  (abi_t a, uint8_t* m) {        _mm_store_ps((abi_t*)m, a); }
-    static abi_t copy_from(uint8_t* m)          { return _mm_load_ps ((abi_t*)m)    ; }
+    static void  copy_to  (abi_t a, uint8_t* m) {        _mm_store_ps((float*)      m, a); }
+    static abi_t copy_from(uint8_t* m)          { return _mm_load_ps ((float const*)m)   ; }
     
     static abi_t add   (abi_t l, abi_t r) { return _mm_add_ps(l, r); }
     static abi_t sub   (abi_t l, abi_t r) { return _mm_sub_ps(l, r); }
@@ -32,8 +32,8 @@ class simd::abi::sse<double>
 public:
     using  abi_t = __m128d;
 
-    static void  copy_to  (abi_t a, uint8_t* m) {        _mm_store_pd((abi_t*)m, a); }
-    static abi_t copy_from(uint8_t* m)          { return _mm_load_pd ((abi_t*)m)    ; }
+    static void  copy_to  (abi_t a, uint8_t* m) {        _mm_store_pd((double*)      m, a); }
+    static abi_t copy_from(uint8_t* m)          { return _mm_load_pd ((double const*)m)   ; }
     
     static abi_t add   (abi_t l, abi_t r) { return _mm_add_pd(l, r); }
     static abi_t sub   (abi_t l, abi_t r) { return _mm_sub_pd(l, r); }
