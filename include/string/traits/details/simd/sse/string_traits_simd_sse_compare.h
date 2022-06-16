@@ -1,5 +1,6 @@
 #pragma once
 #include <string/traits/details/simd/sse/string_traits_simd_sse_type.h>
+#include <stdint.h>
 
 uint16_t
 __synapse_string_traits_simd_sse_compare_equal

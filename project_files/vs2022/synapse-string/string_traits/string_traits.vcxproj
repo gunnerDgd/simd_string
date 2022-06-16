@@ -18,6 +18,27 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\string\traits\details\simd\sse\string_traits_simd_sse_compare.h" />
+    <ClInclude Include="..\..\..\..\include\string\traits\details\simd\sse\string_traits_simd_sse_compare_asm.h" />
+    <ClInclude Include="..\..\..\..\include\string\traits\details\simd\sse\string_traits_simd_sse_copy.h" />
+    <ClInclude Include="..\..\..\..\include\string\traits\details\simd\sse\string_traits_simd_sse_init.h" />
+    <ClInclude Include="..\..\..\..\include\string\traits\details\simd\sse\string_traits_simd_sse_type.h" />
+    <ClInclude Include="..\..\..\..\include\string\traits\simd\sse\sse.h" />
+    <ClInclude Include="..\..\..\..\include\string\traits\simd\sse\sse_compare.h" />
+    <ClInclude Include="..\..\..\..\include\string\traits\simd\sse\sse_copy.h" />
+    <ClInclude Include="..\..\..\..\include\string\traits\simd\sse\sse_init.h" />
+    <ClInclude Include="..\..\..\..\include\string\traits\simd\sse\sse_type.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\traits\details\simd\sse\string_traits_simd_sse_compare.c" />
+    <ClCompile Include="..\..\..\..\source\traits\details\simd\sse\string_traits_simd_sse_compare_asm.c" />
+    <ClCompile Include="..\..\..\..\source\traits\details\simd\sse\string_traits_simd_sse_copy.c" />
+    <ClCompile Include="..\..\..\..\source\traits\details\simd\sse\string_traits_simd_sse_init.c" />
+    <ClCompile Include="..\..\..\..\source\traits\simd\sse\sse_compare.c" />
+    <ClCompile Include="..\..\..\..\source\traits\simd\sse\sse_copy.c" />
+    <ClCompile Include="..\..\..\..\source\traits\simd\sse\sse_init.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -70,6 +91,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>E:\Programming\C++\Projects\Experimental\synapse-string\include;$(IncludePath)</IncludePath>
+    <OutDir>E:\Programming\C++\Projects\Experimental\synapse-string\libs\x64\debug\</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -110,8 +135,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>

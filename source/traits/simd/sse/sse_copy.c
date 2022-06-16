@@ -1,13 +1,18 @@
 #include <string/traits/simd/sse/sse_copy.h>
 #include <string/traits/details/simd/sse/string_traits_simd_sse_copy.h>
 
-synapse_string_traits_simd_sse
+void
 synapse_string_traits_simd_sse_copy_from
-	(uint8_t* pMemory)
+	(synapse_string_traits_simd_sse pSimd, uint8_t* pMemory)
 {
-	
+	__synapse_string_traits_simd_sse_copy_from
+		(pSimd.opaque, pMemory);
 }
 
 void
 synapse_string_traits_simd_sse_copy_to
-(synapse_string_traits_simd_sse, uint8_t*);
+	(synapse_string_traits_simd_sse pSimd, uint8_t* pMemory)
+{
+	__synapse_string_traits_simd_sse_copy_to
+		(pSimd.opaque, pMemory);
+}

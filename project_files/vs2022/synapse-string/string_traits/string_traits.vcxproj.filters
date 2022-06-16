@@ -13,5 +13,90 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\details">
+      <UniqueIdentifier>{b4fbee72-4f6c-4e7f-9df6-d0d91933916b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\details\simd">
+      <UniqueIdentifier>{f7378d47-c8cd-4160-9e4e-ab46635f54fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details">
+      <UniqueIdentifier>{f41a6e50-57a8-4dbd-86fc-906ff4ab9ed9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\details\simd\sse">
+      <UniqueIdentifier>{a209a230-40a0-4b82-b4a8-3b4f94b5e618}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details\simd">
+      <UniqueIdentifier>{a2b27a90-079a-43e6-a77d-4b2cc03a7c45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details\simd\sse">
+      <UniqueIdentifier>{e3e024b6-c97b-4935-b6a5-8b6f0dbf4d11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\simd">
+      <UniqueIdentifier>{6dbf24ef-54d8-4baf-b73e-f3e061339e63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\simd\sse">
+      <UniqueIdentifier>{091c44c0-8bdd-4833-9dbc-d20a120b00ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\simd">
+      <UniqueIdentifier>{9919d71a-6f63-47c9-989b-e4d37d78a92d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\simd\sse">
+      <UniqueIdentifier>{e62364e1-e5d3-49cf-81d9-e02c28f4d6b6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\string\traits\details\simd\sse\string_traits_simd_sse_type.h">
+      <Filter>Header Files\details\simd\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\traits\details\simd\sse\string_traits_simd_sse_copy.h">
+      <Filter>Header Files\details\simd\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\traits\details\simd\sse\string_traits_simd_sse_compare.h">
+      <Filter>Header Files\details\simd\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\traits\simd\sse\sse_compare.h">
+      <Filter>Header Files\simd\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\traits\simd\sse\sse_copy.h">
+      <Filter>Header Files\simd\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\traits\simd\sse\sse_type.h">
+      <Filter>Header Files\simd\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\traits\details\simd\sse\string_traits_simd_sse_init.h">
+      <Filter>Header Files\details\simd\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\traits\simd\sse\sse_init.h">
+      <Filter>Header Files\simd\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\traits\details\simd\sse\string_traits_simd_sse_compare_asm.h">
+      <Filter>Header Files\details\simd\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\traits\simd\sse\sse.h">
+      <Filter>Header Files\simd\sse</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\traits\details\simd\sse\string_traits_simd_sse_copy.c">
+      <Filter>Source Files\details\simd\sse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\traits\details\simd\sse\string_traits_simd_sse_compare.c">
+      <Filter>Source Files\details\simd\sse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\traits\simd\sse\sse_copy.c">
+      <Filter>Source Files\simd\sse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\traits\simd\sse\sse_compare.c">
+      <Filter>Source Files\simd\sse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\traits\details\simd\sse\string_traits_simd_sse_init.c">
+      <Filter>Source Files\details\simd\sse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\traits\simd\sse\sse_init.c">
+      <Filter>Source Files\simd\sse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\traits\details\simd\sse\string_traits_simd_sse_compare_asm.c">
+      <Filter>Source Files\details\simd\sse</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
