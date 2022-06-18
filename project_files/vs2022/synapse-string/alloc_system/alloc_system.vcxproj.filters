@@ -22,6 +22,18 @@
     <Filter Include="Source Files\details">
       <UniqueIdentifier>{2dc53731-7f41-4d17-929f-68724c2030b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\allocation\details\bucket">
+      <UniqueIdentifier>{bc08697c-3479-4c60-90f8-df6a20cd36cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\allocation\details\system_page">
+      <UniqueIdentifier>{cd1ff426-2458-4f65-99da-af2f5bc9aa87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details\bucket">
+      <UniqueIdentifier>{a49bef82-ef04-4bb6-b918-02fa491747d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details\system_page">
+      <UniqueIdentifier>{2326144e-2af0-425b-859a-05a21812a102}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\include\string\allocation\details\string_alloc_type.h">
@@ -30,10 +42,28 @@
     <ClInclude Include="..\..\..\..\include\string\allocation\details\string_alloc.h">
       <Filter>Header Files\allocation\details</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_type.h">
+      <Filter>Header Files\allocation\details\bucket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_init.h">
+      <Filter>Header Files\allocation\details\bucket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_manip.h">
+      <Filter>Header Files\allocation\details\bucket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_copy.h">
+      <Filter>Header Files\allocation\details\bucket</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\source\allocation\details\string_alloc.c">
       <Filter>Source Files\details</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\allocation\details\bucket\string_alloc_bucket_init.c">
+      <Filter>Source Files\details\bucket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\allocation\details\bucket\string_alloc_bucket_manip.c">
+      <Filter>Source Files\details\bucket</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

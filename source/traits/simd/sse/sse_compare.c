@@ -68,6 +68,9 @@ int
 synapse_string_traits_simd_sse_compare_eq128
 	(uint8_t* pLhs, uint8_t* pRhs, size_t pCount)
 {
+	_mm_prefetch(pLhs, _MM_HINT_T2);
+	_mm_prefetch(pRhs, _MM_HINT_T2);
+
 	return
 		__synapse_string_simd_sse_compare_eq128_n(pLhs, pRhs, pCount);
 }
@@ -76,6 +79,9 @@ int
 synapse_string_traits_simd_sse_compare_eq64
 	(uint8_t* pLhs, uint8_t* pRhs, size_t pCount)
 {
+	_mm_prefetch(pLhs, _MM_HINT_T2);
+	_mm_prefetch(pRhs, _MM_HINT_T2);
+
 	return
 		__synapse_string_simd_sse_compare_eq64_n(pLhs, pRhs, pCount);
 }
@@ -84,6 +90,9 @@ int
 synapse_string_traits_simd_sse_compare_gt128
 	(uint8_t* pLhs, uint8_t* pRhs, size_t pCount)
 {
+	_mm_prefetch(pLhs, _MM_HINT_T2);
+	_mm_prefetch(pRhs, _MM_HINT_T2);
+
 	return
 		__synapse_string_simd_sse_compare_gt128_n(pLhs, pRhs, pCount);
 }
@@ -92,6 +101,9 @@ int
 synapse_string_traits_simd_sse_compare_gt64
 	(uint8_t* pLhs, uint8_t* pRhs, size_t pCount)
 {
+	_mm_prefetch(pLhs, _MM_HINT_T2);
+	_mm_prefetch(pRhs, _MM_HINT_T2);
+
 	return
 		__synapse_string_simd_sse_compare_gt64_n(pLhs, pRhs, pCount);
 }
@@ -100,6 +112,9 @@ int
 synapse_string_traits_simd_sse_compare_lt128
 	(uint8_t* pLhs, uint8_t* pRhs, size_t pCount)
 {
+	_mm_prefetch(pLhs, _MM_HINT_T2);
+	_mm_prefetch(pRhs, _MM_HINT_T2);
+
 	return
 		__synapse_string_simd_sse_compare_lt128_n(pLhs, pRhs, pCount);
 }
@@ -108,6 +123,9 @@ int
 synapse_string_traits_simd_sse_compare_lt64
 	(uint8_t* pLhs, uint8_t* pRhs, size_t pCount)
 {
+	_mm_prefetch(pLhs, _MM_HINT_T2);
+	_mm_prefetch(pRhs, _MM_HINT_T2);
+
 	return
 		__synapse_string_simd_sse_compare_lt64_n(pLhs, pRhs, pCount);
 }

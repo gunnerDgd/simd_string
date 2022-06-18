@@ -1,2 +1,2 @@
-﻿  string_traits_simd_sse_compare_asm.c
+﻿  sse_compare.c
   string_traits.vcxproj -> E:\Programming\C++\Projects\Experimental\synapse-string\libs\x64\debug\string_traits.lib

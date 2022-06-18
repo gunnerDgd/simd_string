@@ -19,10 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_copy.h" />
+    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_init.h" />
+    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_manip.h" />
+    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_type.h" />
     <ClInclude Include="..\..\..\..\include\string\allocation\details\string_alloc.h" />
     <ClInclude Include="..\..\..\..\include\string\allocation\details\string_alloc_type.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\allocation\details\bucket\string_alloc_bucket_init.c" />
+    <ClCompile Include="..\..\..\..\source\allocation\details\bucket\string_alloc_bucket_manip.c" />
     <ClCompile Include="..\..\..\..\source\allocation\details\string_alloc.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -78,7 +84,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>E:\Programming\C++\Projects\Experimental\synapse-string\include;$(IncludePath)</IncludePath>
+    <IncludePath>E:\Programming\C++\Projects\Experimental\synapse-string\include;E:\Programming\C++\Projects\Experimental\synapse-structure\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
