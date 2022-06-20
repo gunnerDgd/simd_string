@@ -34,36 +34,62 @@
     <Filter Include="Source Files\details\system_page">
       <UniqueIdentifier>{2326144e-2af0-425b-859a-05a21812a102}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\bucket">
+      <UniqueIdentifier>{342db0a4-63d1-4229-a53a-d17381446b00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\allocation\bucket">
+      <UniqueIdentifier>{238c8ec1-72f1-431e-b494-8d11d6448f8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details\arch">
+      <UniqueIdentifier>{f7e27e01-f8eb-4a4a-8ec3-cf770d070eb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\details\arch\x64">
+      <UniqueIdentifier>{caf6749a-b990-48bf-ae8d-bb2624779c29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\allocation\details\arch">
+      <UniqueIdentifier>{22590eb1-5cc0-48db-a0ac-ab0ec4296c91}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\include\string\allocation\details\string_alloc_type.h">
-      <Filter>Header Files\allocation\details</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\include\string\allocation\details\string_alloc.h">
-      <Filter>Header Files\allocation\details</Filter>
-    </ClInclude>
+    <ClCompile Include="..\..\..\..\source\allocation\details\bucket\string_alloc_bucket_init.c">
+      <Filter>Source Files\details\bucket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\allocation\details\bucket\string_alloc_bucket_allocation.c">
+      <Filter>Source Files\details\bucket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\allocation\details\system_page\string_alloc_syspage_init.c">
+      <Filter>Source Files\details\system_page</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\allocation\details\system_page\string_alloc_syspage_allocation.c">
+      <Filter>Source Files\details\system_page</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_type.h">
       <Filter>Header Files\allocation\details\bucket</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_init.h">
       <Filter>Header Files\allocation\details\bucket</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_manip.h">
+    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_allocation.h">
       <Filter>Header Files\allocation\details\bucket</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_copy.h">
-      <Filter>Header Files\allocation\details\bucket</Filter>
+    <ClInclude Include="..\..\..\..\include\string\allocation\details\system_page\string_alloc_syspage_type.h">
+      <Filter>Header Files\allocation\details\system_page</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\allocation\details\system_page\string_alloc_syspage_init.h">
+      <Filter>Header Files\allocation\details\system_page</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\allocation\details\system_page\string_alloc_syspage_allocation.h">
+      <Filter>Header Files\allocation\details\system_page</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\string\allocation\details\arch\x64_asm_export.h">
+      <Filter>Header Files\allocation\details\arch</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\source\allocation\details\string_alloc.c">
-      <Filter>Source Files\details</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\source\allocation\details\bucket\string_alloc_bucket_init.c">
-      <Filter>Source Files\details\bucket</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\source\allocation\details\bucket\string_alloc_bucket_manip.c">
-      <Filter>Source Files\details\bucket</Filter>
-    </ClCompile>
+    <None Include="..\..\..\..\source\allocation\details\arch\x64\string_alloc_sse_copy.asm">
+      <Filter>Source Files\details\arch\x64</Filter>
+    </None>
   </ItemGroup>
 </Project>

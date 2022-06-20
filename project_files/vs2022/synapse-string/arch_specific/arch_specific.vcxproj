@@ -19,28 +19,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\source\allocation\details\bucket\string_alloc_bucket_allocation.c" />
-    <ClCompile Include="..\..\..\..\source\allocation\details\bucket\string_alloc_bucket_init.c" />
-    <ClCompile Include="..\..\..\..\source\allocation\details\system_page\string_alloc_syspage_allocation.c" />
-    <ClCompile Include="..\..\..\..\source\allocation\details\system_page\string_alloc_syspage_init.c" />
+    <None Include="..\..\..\..\source\arch\x64\string_arch_compare.asm" />
+    <None Include="..\..\..\..\source\arch\x64\string_arch_copy.asm" />
+    <None Include="..\..\..\..\source\arch\x64\string_arch_register.asm" />
+    <None Include="..\..\..\..\source\arch\x64\string_arch_sse_compare.asm" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\include\string\allocation\details\arch\x64_asm_export.h" />
-    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_allocation.h" />
-    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_init.h" />
-    <ClInclude Include="..\..\..\..\include\string\allocation\details\bucket\string_alloc_bucket_type.h" />
-    <ClInclude Include="..\..\..\..\include\string\allocation\details\system_page\string_alloc_syspage_allocation.h" />
-    <ClInclude Include="..\..\..\..\include\string\allocation\details\system_page\string_alloc_syspage_init.h" />
-    <ClInclude Include="..\..\..\..\include\string\allocation\details\system_page\string_alloc_syspage_type.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\source\allocation\details\arch\x64\string_alloc_sse_copy.asm" />
+    <ClInclude Include="..\..\..\..\include\string\arch\x64\string_arch.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b5ecf9ce-da32-4d1d-a1f8-a7d0674ae132}</ProjectGuid>
-    <RootNamespace>allocsystem</RootNamespace>
+    <ProjectGuid>{d956750c-3d62-4c06-b116-91fab68586b8}</ProjectGuid>
+    <RootNamespace>archspecific</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -88,9 +79,6 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>E:\Programming\C++\Projects\Experimental\synapse-string\include;E:\Programming\C++\Projects\Experimental\synapse-structure\include;$(IncludePath)</IncludePath>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -133,7 +121,6 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>
